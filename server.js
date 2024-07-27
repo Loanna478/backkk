@@ -1,13 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const path = require('path');
-const fs = require('fs');
-const { randomInt } = require('crypto');
-const axios = require('axios');
-const cheerio = require('cheerio');
 const mysql = require('mysql');
-const bcrypt = require('bcrypt');
 app.use(cors());
 app.use(express.json());
 

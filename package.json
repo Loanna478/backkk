@@ -11,18 +11,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@google-cloud/recaptcha-enterprise": "^5.10.0",
     "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "fs": "^0.0.1-security",
     "mysql": "^2.18.1",
-    "nodemon": "^3.1.4",
-    "python-shell": "^5.0.0",
-    "react-google-recaptcha": "^3.1.0",
-    "tiktok-downloader": "^0.0.4",
-    "tiktok-scraper": "^1.4.36"
+    "nodemon": "^3.1.4"
   }
 }
