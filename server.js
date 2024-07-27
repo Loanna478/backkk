@@ -7,8 +7,8 @@ app.use(express.json());
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: '',
+    user: 'msk',
+    password: '********',
     database: 'react'
 });
 
@@ -18,6 +18,18 @@ db.connect(err => {
     console.log('MySQL Connected...');
 });
 
+app.post('/reportIssue', (req, res) => {
+    const { filmId, issue } = req.body;
+
+    const sql = "UPDATE film SET signalement = signalement + 1 WHERE id = ?";
+    db.query(sql, [filmId], (err, results) => {
+        if (err) {
+            return res.json({ success: false, message: err.message });
+        }
+
+        return res.json({ success: true, message: 'Issue reported successfully' });
+    });
+});
 
 
 app.get('/getfilms', (req, res) => {
